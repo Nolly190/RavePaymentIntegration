@@ -34,7 +34,7 @@
                 customer_phone: "234099940409",
                 currency: "NGN",
                 payment_method: "both",
-                txref: "rave-123568",
+                txref: "rave-12359",
                 meta: [{
                     metaname: "flightID",
                     metavalue: "AP1234"
@@ -48,10 +48,10 @@
                         response.tx.chargeResponseCode == "0"
                     ) {
                         // redirect to a success page
-                       window.location.replace("@Url.Action("Validate", new { TransactionId = "rave-123568" })");
+                       window.location.replace("@Url.Action("Validate", new { TransactionId = "rave-12359" })");
                     } else {
 
-                       window.location.replace("@Url.Action("Validate", new { TransactionId = "rave-123568" })");
+                       window.location.replace("@Url.Action("Validate", new { TransactionId = "rave-12359" })");
 
                         // redirect to a failure page.
                     }
