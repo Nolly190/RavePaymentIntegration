@@ -31,8 +31,8 @@ namespace FlutterwaveTestApiIntegration.Controllers
     public ActionResult Validate(string TransactionId)
         {
             
-        var data = new { txref = "rave-123568", SECKEY = "FLWSECK-7766fb06695e63a44f9145fedc89bcb6-X", include_payment_entity = 1 };
-        var client = new HttpClient(); /*OH - AAED44*/
+        var data = new { txref = TransactionId, SECKEY = "FLWSECK-7766fb06695e63a44f9145fedc89bcb6-X", include_payment_entity = 1 };
+        var client = new HttpClient(); 
         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             var responseMessage = client.PostAsJsonAsync("https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/xrequery", data).Result;
         var responseStr = responseMessage.Content.ReadAsStringAsync().Result;
