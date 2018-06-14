@@ -48,10 +48,10 @@
                         response.tx.chargeResponseCode == "0"
                     ) {
                         // redirect to a success page
-                       window.location.replace("@Url.Action("Validate", new { UserId = "rave-123568" })");
+                       window.location.replace("@Url.Action("Validate", new { TransactionId = "rave-123568" })");
                     } else {
 
-                       window.location.replace("@Url.Action("Validate", new { UserId = "rave-123568" })");
+                       window.location.replace("@Url.Action("Validate", new { TransactionId = "rave-123568" })");
 
                         // redirect to a failure page.
                     }
