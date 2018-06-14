@@ -28,7 +28,7 @@ namespace FlutterwaveTestApiIntegration.Controllers
 
 
 
-    public ActionResult Validate(string UserId)
+    public ActionResult Validate(string TransactionId)
         {
             
         var data = new { txref = "rave-123568", SECKEY = "FLWSECK-7766fb06695e63a44f9145fedc89bcb6-X", include_payment_entity = 1 };
